@@ -1,0 +1,17 @@
+name: Pong Workflow
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  pong:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Pong and Fail
+        run: |
+          echo "pong"
+          exit 1
